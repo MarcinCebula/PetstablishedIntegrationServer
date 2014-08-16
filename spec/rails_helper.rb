@@ -23,8 +23,7 @@ RSpec.configure do |config|
   config.include Mongoid::Matchers, type: :model
 
   config.filter_run_excluding :vcr_off => true
-  config.filter_run_excluding :broken => true
-  config.filter_run_excluding :integration => true
+  config.filter_run_including :focus => true
 
   config.before :each do |method|
     DatabaseCleaner.strategy = :truncation
@@ -35,7 +34,5 @@ RSpec.configure do |config|
     DatabaseCleaner.clean
   end
 
-
-  config.treat_symbols_as_metadata_keys_with_true_values = true
   config.infer_spec_type_from_file_location!
 end

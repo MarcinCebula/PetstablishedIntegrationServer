@@ -1,0 +1,117 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://api.petfinder.com/shelter.getPets?count=10&format=json&id=NY803&key=3ea4a92e053a83bda1d17959baf8b158&output=full
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers: {}
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json
+      Date:
+      - Sat, 16 Aug 2014 14:01:10 GMT
+      Server:
+      - Apache
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+    body:
+      encoding: ASCII-8BIT
+      string: '{"@encoding":"iso-8859-1","@version":"1.0","petfinder":{"@xmlns:xsi":"http://www.w3.org/2001/XMLSchema-instance","lastOffset":{"$t":"10"},"pets":{"pet":[{"options":{"option":{"$t":"housetrained"}},"breeds":{"breed":{"$t":"Domestic
+        Short Hair-gray"}},"shelterPetId":{},"status":{"$t":"A"},"name":{"$t":"Kittens!"},"contact":{"email":{"$t":"adopt@emptycagescollective.org"},"zip":{"$t":"11211"},"city":{"$t":"Brooklyn"},"fax":{},"address1":{"$t":"302
+        Bedford Avenue, PMB: 301"},"phone":{"$t":"1 (800) 880-2684"},"state":{"$t":"NY"},"address2":{}},"description":{"$t":"Yes,
+        we have kittens!\n\nThey will be spayed or neutered when they weigh at least
+        2 pounds (they are growing fast!) and will then be ready to find forever homes.\n"},"sex":{"$t":"F"},"age":{"$t":"Baby"},"size":{"$t":"S"},"mix":{"$t":"no"},"shelterId":{"$t":"NY803"},"lastUpdate":{"$t":"2013-05-31T20:08:07Z"},"media":{"photos":{"photo":[{"@size":"pnt","$t":"http://photos.petfinder.com/photos/pets/19822901/1/?bust=1307664210&width=60&-pnt.jpg","@id":"1"},{"@size":"fpm","$t":"http://photos.petfinder.com/photos/pets/19822901/1/?bust=1307664210&width=95&-fpm.jpg","@id":"1"},{"@size":"x","$t":"http://photos.petfinder.com/photos/pets/19822901/1/?bust=1307664210&width=500&-x.jpg","@id":"1"},{"@size":"pn","$t":"http://photos.petfinder.com/photos/pets/19822901/1/?bust=1307664210&width=300&-pn.jpg","@id":"1"},{"@size":"t","$t":"http://photos.petfinder.com/photos/pets/19822901/1/?bust=1307664210&width=50&-t.jpg","@id":"1"}]}},"id":{"$t":"19822901"},"animal":{"$t":"Cat"}},{"options":{"option":[{"$t":"hasShots"},{"$t":"altered"},{"$t":"housetrained"}]},"breeds":{"breed":{"$t":"Domestic
+        Short Hair - gray and white"}},"shelterPetId":{},"status":{"$t":"A"},"name":{"$t":"Zoe"},"contact":{"email":{"$t":"adopt@emptycagescollective.org"},"zip":{"$t":"11211"},"city":{"$t":"Brooklyn"},"fax":{},"address1":{"$t":"302
+        Bedford Avenue, PMB: 301"},"phone":{"$t":"1 (800) 880-2684"},"state":{"$t":"NY"},"address2":{}},"description":{"$t":"We
+        can only imagine what Zoe''s beautiful eyes have seen. She was abandoned by
+        her guardian(s) and left to fend for herself on the street. Zoe did not understand
+        that she had been deliberately abandoned and kept trying to get back into
+        her apartment; she was eventually rescued from the boiler room in her building.
+        Could Zoe find a safe place in your home and heart? She would be so grateful.\n\n\n\n\n"},"sex":{"$t":"F"},"age":{"$t":"Adult"},"size":{"$t":"S"},"mix":{"$t":"no"},"shelterId":{"$t":"NY803"},"lastUpdate":{"$t":"2011-07-05T16:29:35Z"},"media":{"photos":{"photo":[{"@size":"pnt","$t":"http://photos.petfinder.com/photos/pets/19939700/1/?bust=1308575789&width=60&-pnt.jpg","@id":"1"},{"@size":"fpm","$t":"http://photos.petfinder.com/photos/pets/19939700/1/?bust=1308575789&width=95&-fpm.jpg","@id":"1"},{"@size":"x","$t":"http://photos.petfinder.com/photos/pets/19939700/1/?bust=1308575789&width=500&-x.jpg","@id":"1"},{"@size":"pn","$t":"http://photos.petfinder.com/photos/pets/19939700/1/?bust=1308575789&width=300&-pn.jpg","@id":"1"},{"@size":"t","$t":"http://photos.petfinder.com/photos/pets/19939700/1/?bust=1308575789&width=50&-t.jpg","@id":"1"}]}},"id":{"$t":"19939700"},"animal":{"$t":"Cat"}},{"options":{},"breeds":{"breed":{"$t":"Mouse"}},"shelterPetId":{},"status":{"$t":"A"},"name":{"$t":"Beb,
+        Darius, & More"},"contact":{"email":{"$t":"adopt@emptycagescollective.org"},"zip":{"$t":"11211"},"city":{"$t":"Brooklyn"},"fax":{},"address1":{"$t":"302
+        Bedford Avenue, PMB: 301"},"phone":{"$t":"1 (800) 880-2684"},"state":{"$t":"NY"},"address2":{}},"description":{"$t":"\nDarius
+        & Beb are two Egyptian Spiny mice who were rescued by Empty Cages Collective
+        (www.emptycagescollective.org) with dozens of their Egyptian Spiny mouse friends
+        from a hoarder who was breeding them. Egyptian spiny mice are wild mice who
+        the exotic animal trade has exploited as one of the dozens of naturally wild
+        animals they lock into cages and convince the public are appropriate pets.
+        Unfortunately, Darius & Beb will never be free back in Palestine or Egypt,
+        but we are looking for good, loving homes where they can live out their lives
+        with dignity and compassion here in the U.S. Egyptian Spiny mice live longer
+        than other mice (5+ years) and are relatively easy to care for. Please get
+        in touch at adopt@emptycagescollective.org or 1 (800) 880-2684 if you are
+        interested in adopting them. We have both male and female Egyptian Spiny mice
+        available for adoption!\n"},"sex":{"$t":"M"},"age":{"$t":"Young"},"size":{"$t":"S"},"mix":{"$t":"no"},"shelterId":{"$t":"NY803"},"lastUpdate":{"$t":"2012-08-14T23:42:13Z"},"media":{"photos":{"photo":[{"@size":"pnt","$t":"http://photos.petfinder.com/photos/pets/20115107/1/?bust=1309835669&width=60&-pnt.jpg","@id":"1"},{"@size":"fpm","$t":"http://photos.petfinder.com/photos/pets/20115107/1/?bust=1309835669&width=95&-fpm.jpg","@id":"1"},{"@size":"x","$t":"http://photos.petfinder.com/photos/pets/20115107/1/?bust=1309835669&width=500&-x.jpg","@id":"1"},{"@size":"pn","$t":"http://photos.petfinder.com/photos/pets/20115107/1/?bust=1309835669&width=300&-pn.jpg","@id":"1"},{"@size":"t","$t":"http://photos.petfinder.com/photos/pets/20115107/1/?bust=1309835669&width=50&-t.jpg","@id":"1"},{"@size":"pnt","$t":"http://photos.petfinder.com/photos/pets/20115107/2/?bust=1309835669&width=60&-pnt.jpg","@id":"2"},{"@size":"fpm","$t":"http://photos.petfinder.com/photos/pets/20115107/2/?bust=1309835669&width=95&-fpm.jpg","@id":"2"},{"@size":"x","$t":"http://photos.petfinder.com/photos/pets/20115107/2/?bust=1309835669&width=500&-x.jpg","@id":"2"},{"@size":"pn","$t":"http://photos.petfinder.com/photos/pets/20115107/2/?bust=1309835669&width=300&-pn.jpg","@id":"2"},{"@size":"t","$t":"http://photos.petfinder.com/photos/pets/20115107/2/?bust=1309835669&width=50&-t.jpg","@id":"2"},{"@size":"pnt","$t":"http://photos.petfinder.com/photos/pets/20115107/3/?bust=1309835669&width=60&-pnt.jpg","@id":"3"},{"@size":"fpm","$t":"http://photos.petfinder.com/photos/pets/20115107/3/?bust=1309835669&width=95&-fpm.jpg","@id":"3"},{"@size":"x","$t":"http://photos.petfinder.com/photos/pets/20115107/3/?bust=1309835669&width=500&-x.jpg","@id":"3"},{"@size":"pn","$t":"http://photos.petfinder.com/photos/pets/20115107/3/?bust=1309835669&width=300&-pn.jpg","@id":"3"},{"@size":"t","$t":"http://photos.petfinder.com/photos/pets/20115107/3/?bust=1309835669&width=50&-t.jpg","@id":"3"}]}},"id":{"$t":"20115107"},"animal":{"$t":"Small
+        & Furry"}},{"options":{},"breeds":{"breed":{"$t":"Mouse"}},"shelterPetId":{},"status":{"$t":"A"},"name":{"$t":"Marissa
+        and Others"},"contact":{"email":{"$t":"adopt@emptycagescollective.org"},"zip":{"$t":"11211"},"city":{"$t":"Brooklyn"},"fax":{},"address1":{"$t":"302
+        Bedford Avenue, PMB: 301"},"phone":{"$t":"1 (800) 880-2684"},"state":{"$t":"NY"},"address2":{}},"description":{"$t":"\nMarissa
+        was rescued (with two dozen of her mouse friends) from a laboratory after
+        they were done using her. She (and her fellows) were scheduled to be killed.
+        Many of the mice didn''t survive what they were used for--so Marissa is one
+        of the lucky ones. Instead, Empty Cages Collective (www.emptycagescollective.org)
+        stepped in and agreed to take them for placement in good homes. Marissa hates
+        standing still (as you can see by her photograph) but all of the white mice
+        from this rescue are friendly and handleable. They would rather be spinning
+        around on their wheels, chewing paper towel rolls, and eating snacks rather
+        than waiting for their close up... help them enjoy their golden years in a
+        home where they will be treated with dignity and respect as fellow sentient
+        beings. If you''re interested in adopting please contact us at adopt@emptycagescollective.org
+        or 1 (800) 880-2684.\n"},"sex":{"$t":"F"},"age":{"$t":"Young"},"size":{"$t":"S"},"mix":{"$t":"no"},"shelterId":{"$t":"NY803"},"lastUpdate":{"$t":"2012-08-14T23:45:58Z"},"media":{"photos":{"photo":[{"@size":"pnt","$t":"http://photos.petfinder.com/photos/pets/20115251/1/?bust=1309838498&width=60&-pnt.jpg","@id":"1"},{"@size":"fpm","$t":"http://photos.petfinder.com/photos/pets/20115251/1/?bust=1309838498&width=95&-fpm.jpg","@id":"1"},{"@size":"x","$t":"http://photos.petfinder.com/photos/pets/20115251/1/?bust=1309838498&width=500&-x.jpg","@id":"1"},{"@size":"pn","$t":"http://photos.petfinder.com/photos/pets/20115251/1/?bust=1309838498&width=300&-pn.jpg","@id":"1"},{"@size":"t","$t":"http://photos.petfinder.com/photos/pets/20115251/1/?bust=1309838498&width=50&-t.jpg","@id":"1"}]}},"id":{"$t":"20115251"},"animal":{"$t":"Small
+        & Furry"}},{"options":{"option":[{"$t":"hasShots"},{"$t":"altered"}]},"breeds":{"breed":{"$t":"Cairn
+        Terrier"}},"shelterPetId":{},"status":{"$t":"A"},"name":{"$t":"Little"},"contact":{"email":{"$t":"adopt@emptycagescollective.org"},"zip":{"$t":"11211"},"city":{"$t":"Brooklyn"},"fax":{},"address1":{"$t":"302
+        Bedford Avenue, PMB: 301"},"phone":{"$t":"1 (800) 880-2684"},"state":{"$t":"NY"},"address2":{}},"description":{"$t":"\nMeet
+        Little! Little is a sweet amazing little mixed breed pup with a heart of gold!
+        Little was rescued with three other dogs from the lobby of NYC Animal Care
+        & Control by Empty Cages Collective (www.emptycagescollective.org) as she
+        was about to get abandoned by her neglectful \"guardian.\" Little was such
+        a terrified little girl that she didn''t allow any of the volunteers at ECC
+        to even touch her for over two weeks without shuddering. She is now more comfortable
+        and is looking for a foster (or preferably!) or permanent home! ECC got little
+        vaccinated, tested for heartworm (negative!), dewormed, spayed and treated
+        for external parasites. The only thing she needs now is for someone to love
+        her forever! Please get in touch with Empty Cages Collective if you''re interested
+        in adopting or fostering Little: 1 (800) 880-2684 or adopt@emptycagescollective.org!
+        Please share widely!\n"},"sex":{"$t":"F"},"age":{"$t":"Adult"},"size":{"$t":"S"},"mix":{"$t":"yes"},"shelterId":{"$t":"NY803"},"lastUpdate":{"$t":"2012-09-15T18:49:00Z"},"media":{"photos":{"photo":[{"@size":"pnt","$t":"http://photos.petfinder.com/photos/pets/21565580/2/?bust=1347734930&width=60&-pnt.jpg","@id":"1"},{"@size":"fpm","$t":"http://photos.petfinder.com/photos/pets/21565580/2/?bust=1347734930&width=95&-fpm.jpg","@id":"1"},{"@size":"x","$t":"http://photos.petfinder.com/photos/pets/21565580/2/?bust=1347734930&width=500&-x.jpg","@id":"1"},{"@size":"pn","$t":"http://photos.petfinder.com/photos/pets/21565580/2/?bust=1347734930&width=300&-pn.jpg","@id":"1"},{"@size":"t","$t":"http://photos.petfinder.com/photos/pets/21565580/2/?bust=1347734930&width=50&-t.jpg","@id":"1"}]}},"id":{"$t":"21565580"},"animal":{"$t":"Dog"}},{"options":{"option":[{"$t":"specialNeeds"},{"$t":"hasShots"},{"$t":"altered"},{"$t":"housetrained"}]},"breeds":{"breed":{"$t":"Domestic
+        Short Hair - orange and white"}},"shelterPetId":{},"status":{"$t":"A"},"name":{"$t":"Ranier"},"contact":{"email":{"$t":"adopt@emptycagescollective.org"},"zip":{"$t":"11211"},"city":{"$t":"Brooklyn"},"fax":{},"address1":{"$t":"302
+        Bedford Avenue, PMB: 301"},"phone":{"$t":"1 (800) 880-2684"},"state":{"$t":"NY"},"address2":{}},"description":{"$t":"\nOne
+        of the sweetest, mellow boys we''ve ever met.  Healthy and happy and just
+        wants to be loved! Sadly, Ranier just recently test positive for Feline Leukemia.
+        Feline Leukemia cats still have many happy and healthy years to live after
+        being diagnosed. Rainer would be a perfect companion to another FELV+ cat
+        or in a home with no other cats.\n"},"sex":{"$t":"M"},"age":{"$t":"Adult"},"size":{"$t":"M"},"mix":{"$t":"no"},"shelterId":{"$t":"NY803"},"lastUpdate":{"$t":"2013-01-14T16:39:17Z"},"media":{"photos":{"photo":[{"@size":"pnt","$t":"http://photos.petfinder.com/photos/pets/23943822/1/?bust=1345925603&width=60&-pnt.jpg","@id":"1"},{"@size":"fpm","$t":"http://photos.petfinder.com/photos/pets/23943822/1/?bust=1345925603&width=95&-fpm.jpg","@id":"1"},{"@size":"x","$t":"http://photos.petfinder.com/photos/pets/23943822/1/?bust=1345925603&width=500&-x.jpg","@id":"1"},{"@size":"pn","$t":"http://photos.petfinder.com/photos/pets/23943822/1/?bust=1345925603&width=300&-pn.jpg","@id":"1"},{"@size":"t","$t":"http://photos.petfinder.com/photos/pets/23943822/1/?bust=1345925603&width=50&-t.jpg","@id":"1"}]}},"id":{"$t":"23943822"},"animal":{"$t":"Cat"}},{"options":{"option":[{"$t":"hasShots"},{"$t":"altered"}]},"breeds":{"breed":{"$t":"Domestic
+        Short Hair"}},"shelterPetId":{},"status":{"$t":"A"},"name":{"$t":"Shane"},"contact":{"email":{"$t":"adopt@emptycagescollective.org"},"zip":{"$t":"11211"},"city":{"$t":"Brooklyn"},"fax":{},"address1":{"$t":"302
+        Bedford Avenue, PMB: 301"},"phone":{"$t":"1 (800) 880-2684"},"state":{"$t":"NY"},"address2":{}},"description":{"$t":"\nShane
+        was rescued from an abuse situation by Empty Cages Collective.\n\nHe is a
+        bit shy at first, but warms up quickly.  He is neutered, up-to-date on vaccinations,
+        negative for feline leukemia and FIV and ready to be loved for the first time
+        in his life.\n"},"sex":{"$t":"M"},"age":{"$t":"Adult"},"size":{"$t":"M"},"mix":{"$t":"no"},"shelterId":{"$t":"NY803"},"lastUpdate":{"$t":"2012-11-07T02:19:29Z"},"media":{"photos":{"photo":[{"@size":"pnt","$t":"http://photos.petfinder.com/photos/pets/24578360/1/?bust=1352254759&width=60&-pnt.jpg","@id":"1"},{"@size":"fpm","$t":"http://photos.petfinder.com/photos/pets/24578360/1/?bust=1352254759&width=95&-fpm.jpg","@id":"1"},{"@size":"x","$t":"http://photos.petfinder.com/photos/pets/24578360/1/?bust=1352254759&width=500&-x.jpg","@id":"1"},{"@size":"pn","$t":"http://photos.petfinder.com/photos/pets/24578360/1/?bust=1352254759&width=300&-pn.jpg","@id":"1"},{"@size":"t","$t":"http://photos.petfinder.com/photos/pets/24578360/1/?bust=1352254759&width=50&-t.jpg","@id":"1"}]}},"id":{"$t":"24578360"},"animal":{"$t":"Cat"}},{"options":{"option":[{"$t":"hasShots"},{"$t":"altered"},{"$t":"housetrained"}]},"breeds":{"breed":{"$t":"Domestic
+        Short Hair"}},"shelterPetId":{},"status":{"$t":"A"},"name":{"$t":"Kew"},"contact":{"email":{"$t":"adopt@emptycagescollective.org"},"zip":{"$t":"11211"},"city":{"$t":"Brooklyn"},"fax":{},"address1":{"$t":"302
+        Bedford Avenue, PMB: 301"},"phone":{"$t":"1 (800) 880-2684"},"state":{"$t":"NY"},"address2":{}},"description":{"$t":"\nKew
+        is one of the 23 cats Empty Cages Collective recently rescued from \"living\"
+        in a car in Queens. Kew was almost dumped in a park the day before the hurricane
+        until ECC stepped in to help. He''s a handsome boy of about three years, and
+        he is looking for a home to call his own.\n\n"},"sex":{"$t":"M"},"age":{"$t":"Adult"},"size":{"$t":"M"},"mix":{"$t":"no"},"shelterId":{"$t":"NY803"},"lastUpdate":{"$t":"2012-11-28T01:03:25Z"},"media":{"photos":{"photo":[{"@size":"pnt","$t":"http://photos.petfinder.com/photos/pets/24747073/1/?bust=1354064481&width=60&-pnt.jpg","@id":"1"},{"@size":"fpm","$t":"http://photos.petfinder.com/photos/pets/24747073/1/?bust=1354064481&width=95&-fpm.jpg","@id":"1"},{"@size":"x","$t":"http://photos.petfinder.com/photos/pets/24747073/1/?bust=1354064481&width=500&-x.jpg","@id":"1"},{"@size":"pn","$t":"http://photos.petfinder.com/photos/pets/24747073/1/?bust=1354064481&width=300&-pn.jpg","@id":"1"},{"@size":"t","$t":"http://photos.petfinder.com/photos/pets/24747073/1/?bust=1354064481&width=50&-t.jpg","@id":"1"}]}},"id":{"$t":"24747073"},"animal":{"$t":"Cat"}},{"options":{},"breeds":{"breed":{"$t":"Corn/Rat"}},"shelterPetId":{},"status":{"$t":"A"},"name":{"$t":"Luke"},"contact":{"email":{"$t":"adopt@emptycagescollective.org"},"zip":{"$t":"11211"},"city":{"$t":"Brooklyn"},"fax":{},"address1":{"$t":"302
+        Bedford Avenue, PMB: 301"},"phone":{"$t":"1 (800) 880-2684"},"state":{"$t":"NY"},"address2":{}},"description":{"$t":"\nLuke
+        the little corn snake was rescued by Empty Cages Collective (www.emptycagescollective.org)
+        after he was abandoned at NYC Animal Care & Control. He is a sweet little
+        snake and is looking for a loving home to call his own and is being fostered
+        in Williamsburg, Brooklyn! We wish all snakes could live f\n\n\nreely in their
+        native habitats. Until such a time arrives that humans recognize that other
+        sentient beings deserve their freedom and respectful treatment, we will try
+        our best to place refugees of the exotic \"pet\" trade in qualified, caring
+        homes. If you''re interested, please get in touch: adopt@emptycagescollective.org
+        or 1800-880-2684.\n"},"sex":{"$t":"M"},"age":{"$t":"Adult"},"size":{"$t":"S"},"mix":{"$t":"no"},"shelterId":{"$t":"NY803"},"lastUpdate":{"$t":"2012-12-16T19:59:01Z"},"media":{"photos":{"photo":[{"@size":"pnt","$t":"http://photos.petfinder.com/photos/pets/24904201/1/?bust=1355687930&width=60&-pnt.jpg","@id":"1"},{"@size":"fpm","$t":"http://photos.petfinder.com/photos/pets/24904201/1/?bust=1355687930&width=95&-fpm.jpg","@id":"1"},{"@size":"x","$t":"http://photos.petfinder.com/photos/pets/24904201/1/?bust=1355687930&width=500&-x.jpg","@id":"1"},{"@size":"pn","$t":"http://photos.petfinder.com/photos/pets/24904201/1/?bust=1355687930&width=300&-pn.jpg","@id":"1"},{"@size":"t","$t":"http://photos.petfinder.com/photos/pets/24904201/1/?bust=1355687930&width=50&-t.jpg","@id":"1"}]}},"id":{"$t":"24904201"},"animal":{"$t":"Scales,
+        Fins & Other"}},{"options":{"option":[{"$t":"hasShots"},{"$t":"altered"},{"$t":"housetrained"}]},"breeds":{"breed":[{"$t":"Labrador
+        Retriever"},{"$t":"Chow Chow"}]},"shelterPetId":{},"status":{"$t":"A"},"name":{"$t":"Handsome"},"contact":{"email":{"$t":"adopt@emptycagescollective.org"},"zip":{"$t":"11211"},"city":{"$t":"Brooklyn"},"fax":{},"address1":{"$t":"302
+        Bedford Avenue, PMB: 301"},"phone":{"$t":"1 (800) 880-2684"},"state":{"$t":"NY"},"address2":{}},"description":{},"sex":{"$t":"M"},"age":{"$t":"Senior"},"size":{"$t":"L"},"mix":{"$t":"yes"},"shelterId":{"$t":"NY803"},"lastUpdate":{"$t":"2013-01-09T18:45:27Z"},"media":{"photos":{"photo":[{"@size":"pnt","$t":"http://photos.petfinder.com/photos/pets/25074113/1/?bust=1357757126&width=60&-pnt.jpg","@id":"1"},{"@size":"fpm","$t":"http://photos.petfinder.com/photos/pets/25074113/1/?bust=1357757126&width=95&-fpm.jpg","@id":"1"},{"@size":"x","$t":"http://photos.petfinder.com/photos/pets/25074113/1/?bust=1357757126&width=500&-x.jpg","@id":"1"},{"@size":"pn","$t":"http://photos.petfinder.com/photos/pets/25074113/1/?bust=1357757126&width=300&-pn.jpg","@id":"1"},{"@size":"t","$t":"http://photos.petfinder.com/photos/pets/25074113/1/?bust=1357757126&width=50&-t.jpg","@id":"1"}]}},"id":{"$t":"25074113"},"animal":{"$t":"Dog"}}]},"header":{"timestamp":{"$t":"2014-08-16T14:01:10Z"},"status":{"message":{},"code":{"$t":"100"}},"version":{"$t":"0.1"}},"@xsi:noNamespaceSchemaLocation":"http://api.petfinder.com/schemas/0.9/petfinder.xsd"}}'
+    http_version: 
+  recorded_at: Sat, 16 Aug 2014 14:01:10 GMT
+recorded_with: VCR 2.9.2
