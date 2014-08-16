@@ -17,6 +17,7 @@ gem 'rack-cors'
 gem 'awesome_print', :git => "https://github.com/MarcinCebula/awesome_print.git"
 
 gem 'faraday'
+gem 'excon'
 
 group :development, :test do
   gem 'faraday'
