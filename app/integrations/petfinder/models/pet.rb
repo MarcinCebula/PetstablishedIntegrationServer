@@ -1,19 +1,23 @@
 module PetfinderIntegration
   module Models
     class Pet
-      attr_accessor :options, :breeds, :shelter_pet_id, :status, :name, :contact, :description, :sex, :age, :size, :mix, :shelter_id, :last_update, :media, :id, :animal, :images
+      attr_accessor :options, :breeds, :shelter_pet_id, :status, :name, :contact, :description, :sex, :age, :size, :mix, :shelter_id, :last_update, :media, :id, :animal
 
       def initialize(data)
         @data = data
       end
-
-      private
       def run
-        clean_hash = cleanup(data, ['media'])
-        clean_hash['media'] = clean_media(data)
+        clean_hash = cleanup(@data, ['media'])
+        clean_hash['media'] = clean_media(@data)
         apply_translations(clean_hash)
         set_instance_variables(clean_hash)
       end
+
+      def images
+        @media['images'] if @media
+      end
+
+      private
       def cleanup(pet_data, exclude=[])
         data = exclude_keys(pet_data.dup, exclude)
         clean_hash = {}
@@ -31,13 +35,14 @@ module PetfinderIntegration
         end
         clean_hash
       end
-      def images
-        # @media['images']
+      def set_instance_variables(hash)
+        hash.each do |variable, value|
+          instance_variable_set("@#{variable}", value)
+        end
       end
-
       def clean_media(data)
         return {
-          'images' => clean_images(data['media'])
+          'images' => cleanup_images(data['media'])
         }
       end
       def cleanup_images(media_data)

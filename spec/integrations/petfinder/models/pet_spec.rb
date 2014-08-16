@@ -1,6 +1,6 @@
 require "rails_helper"
 
-describe PetfinderIntegration::Models::Pet, :focus => false do
+describe PetfinderIntegration::Models::Pet, :focus => true do
   subject { PetfinderIntegration::Models::Pet }
 
   let(:shelter_get_10_pets_from_NY803) {
@@ -15,25 +15,33 @@ describe PetfinderIntegration::Models::Pet, :focus => false do
                 :sex, :age, :size, :mix, :shelter_id, :last_update, :media, :id, :animal, :images]
 
   pet_fields.each do |field|
-    it 'should respond to #{field}' do
+    it "should respond to #{field}" do
       expect(pet_object).to respond_to(field)
     end
   end
-  describe 'create' do
+  describe 'run' do
     it 'should convert data into Pet object' do
-      expect(pet_object).not_to raise_error
+      expect { pet_object.run }.not_to raise_error
     end
 
     pet_fields.each do |field|
-      it 'should only pass if #{field} is not nil' do
-        expect(pet_object.send(field).run).not_to eq nil
+      it "should only pass if #{field} is not nil" do
+        expect(pet_object.send(field)).to eq nil
+        pet_object.run
+        expect(pet_object.send(field)).not_to eq nil
       end
     end
   end
+  it 'images should return images' do
+    expect(pet_object.images).to eq nil
+    pet_object.run
+    expect(pet_object.images.first['thumbnail']['url']).to eq 'http://photos.petfinder.com/photos/pets/24747073/1/?bust=1354064481&width=50&-t.jpg'
+  end
+
   describe 'private' do
     context 'cleanup(data, exclude)' do
       it 'should exclude keys' do
-        expect(pet_object).to receive(:exclude_keys).with({}, ['test1', 'test2'])
+        expect(pet_object).to receive(:exclude_keys).with([], ['test1', 'test2']).and_return({})
         pet_object.send(:cleanup, {}, ['test1', 'test2'])
       end
       it 'should convert empty hash to empty string if key not plural' do
@@ -57,7 +65,7 @@ describe PetfinderIntegration::Models::Pet, :focus => false do
         expect(pet_object.send(:cleanup, data)).to eq({ 'shelter_id' => 'NY803' })
       end
     end
-    context 'clean_images', :focus => true do
+    context 'clean_images' do
       it 'should convert media["photos"] data  into array of hashes of images' do
         data = pets[2]['media']
         result = pet_object.send(:cleanup_images, data)
@@ -84,8 +92,11 @@ describe PetfinderIntegration::Models::Pet, :focus => false do
         expect(pet_object.send(:apply_translation_for_status, status_unknown)).to eq({ 'value' => '', 'verbose' => 'unknown' })
       end
     end
-    it 'convert_to_instance_variables should take a hash and converted it into instance variables' do
-
+    it 'set_instance_variables should take a hash and converted it into instance variables' do
+      data = {"options"=>["hasShots", "altered", "housetrained"] }
+      expect(pet_object.options).to eq nil
+      pet_object.send(:set_instance_variables, data)
+      expect(pet_object.options).to eq ["hasShots", "altered", "housetrained"]
     end
     it "exclude_keys, should exclude ['mouse', 'rat', 'fish']" do
       expect(pet_object.send(:exclude_keys, ['dog', 'mouse', 'cat', 'rat'], ['mouse', 'rat', 'fish'])).to eq(['dog', 'cat'])
