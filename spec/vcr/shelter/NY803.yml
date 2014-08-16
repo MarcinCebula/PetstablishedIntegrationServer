@@ -1,0 +1,32 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://api.petfinder.com/shelter.get?format=json&id=NY803&key=3ea4a92e053a83bda1d17959baf8b158
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers: {}
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json
+      Date:
+      - Sat, 16 Aug 2014 20:40:22 GMT
+      Server:
+      - Apache
+      Content-Length:
+      - '691'
+      Connection:
+      - keep-alive
+    body:
+      encoding: ASCII-8BIT
+      string: '{"@encoding":"iso-8859-1","@version":"1.0","petfinder":{"@xmlns:xsi":"http://www.w3.org/2001/XMLSchema-instance","shelter":{"country":{"$t":"US"},"longitude":{"$t":"-73.9538"},"name":{"$t":"Empty
+        Cages Collective"},"phone":{"$t":"1 (800) 880-2684"},"state":{"$t":"NY"},"address2":{},"email":{"$t":"adopt@emptycagescollective.org"},"city":{"$t":"Brooklyn"},"zip":{"$t":"11211"},"fax":{},"latitude":{"$t":"40.7118"},"id":{"$t":"NY803"},"address1":{"$t":"302
+        Bedford Avenue, PMB: 301"}},"header":{"timestamp":{"$t":"2014-08-16T20:40:22Z"},"status":{"message":{},"code":{"$t":"100"}},"version":{"$t":"0.1"}},"@xsi:noNamespaceSchemaLocation":"http://api.petfinder.com/schemas/0.9/petfinder.xsd"}}'
+    http_version: 
+  recorded_at: Sat, 16 Aug 2014 20:40:22 GMT
+recorded_with: VCR 2.9.2

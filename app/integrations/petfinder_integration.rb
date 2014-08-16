@@ -1,5 +1,5 @@
 require 'petfinder/models/pet'
-# require 'petfinder/models/shelter'
+require 'petfinder/models/shelter'
 
 module PetfinderIntegration
   class << self
