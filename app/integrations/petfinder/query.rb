@@ -1,5 +1,11 @@
 module PetfinderIntegration
   module Query
+    def self.inclusive_filter(data, filters)
+      filters.map do |filter|
+        data.select { |pet| (pet.send(filter.keys[0].to_sym).downcase).include? filter.values[0].downcase }
+      end.flatten.uniq
+    end
+
     module Shelter
       def self.get(id)
         params =  { 'id' => id }
@@ -17,9 +23,7 @@ module PetfinderIntegration
 
       def self.get_with_filter_inclusive(params, filters)
         result = self.get(params)
-        filters.map do |filter|
-          result.select { |pet| (pet.send(filter.keys[0].to_sym).downcase).include? filter.values[0].downcase }
-        end.flatten.uniq
+        PetfinderIntegration::Query.inclusive_filter(result, filters)
       end
     end
   end
