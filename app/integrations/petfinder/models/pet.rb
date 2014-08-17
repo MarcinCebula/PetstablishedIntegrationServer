@@ -3,6 +3,7 @@ module PetfinderIntegration
     class Pet
       attr_accessor :options, :breeds, :shelter_pet_id, :status, :name, :contact, :description, :sex, :age, :size, :mix, :shelter_id, :last_update, :media, :id, :animal
 
+
       def initialize(data)
         @data = data
       end
@@ -16,6 +17,14 @@ module PetfinderIntegration
 
       def images
         @media['images'] if @media
+      end
+
+      def to_model
+        hash = {}
+        attribute_list.each do |attr|
+          hash[attr.to_s] = self.send(attr)
+        end
+        hash
       end
 
       private
@@ -110,6 +119,9 @@ module PetfinderIntegration
       end
       def is_plural?(str)
         str.pluralize == str
+      end
+      def attribute_list
+        [:options, :breeds, :shelter_pet_id, :status, :name, :contact, :description, :sex, :age, :size, :mix, :shelter_id, :last_update, :media, :id, :animal]
       end
     end
   end

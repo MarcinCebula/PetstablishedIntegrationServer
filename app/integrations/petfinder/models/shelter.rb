@@ -13,10 +13,20 @@ module PetfinderIntegration
         self
       end
 
+      def to_model
+        hash = {}
+        attribute_list.each do |attr|
+          hash[attr.to_s] = self.send(attr)
+        end
+        hash
+      end
+
+
       private
 
-
-
+      def attribute_list
+        [:country, :longitude, :latitude, :name, :phone, :state, :address1, :address2, :email, :city, :zip, :fax, :id]
+      end
 
       #------------------ Might want to extract this ------------------
       def cleanup(pet_data, exclude=[])

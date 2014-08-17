@@ -70,9 +70,23 @@ describe PetfinderIntegration::Models::Pet, :focus => true do
 
 
 
-
-
     #------------------ Might want to extract this ------------------
+
+    describe '.to_model' do
+      (fields = pet_fields.dup).delete(:images)
+      fields.each do |field|
+        it "hash['#{field}'] should not be blank" do
+          hash = object.run.to_model
+          expect(hash[field.to_s]).not_to eq nil
+        end
+      end
+    end
+    it 'should only contain pet_fields' do
+      hash = object.to_model
+      (fields = pet_fields.dup).delete(:images)
+      expect(hash.keys - fields.map(&:to_s)).to eq []
+    end
+
 
     it 'set_instance_variables should take a hash and converted it into instance variables' do
       data = {"options"=>["hasShots", "altered", "housetrained"] }
