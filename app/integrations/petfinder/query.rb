@@ -14,13 +14,14 @@ module PetfinderIntegration
       end
     end
     module PetsThroughShelter
+      # Params: [:id, :status, :offset, :output, :count]
       def self.get(params)
         result = PetfinderIntegration::Connection.get('shelter.getPets', params)
         (result['petfinder']['pets']['pet'] || []).map do |pet|
           PetfinderIntegration::Models::Pet.new(pet).run
         end
       end
-
+      # Params: [:id, :status, :offset, :output, :count]
       def self.get_with_filter_inclusive(params, filters)
         result = self.get(params)
         PetfinderIntegration::Query.inclusive_filter(result, filters)

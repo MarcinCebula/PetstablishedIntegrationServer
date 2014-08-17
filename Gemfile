@@ -48,5 +48,5 @@ group :test do
   gem 'mongoid-rspec'
 
   gem 'vcr'
-  gem 'webmock'
+  gem 'webmock', :git => 'https://github.com/bblimke/webmock.git', :branch => 'master'
 end

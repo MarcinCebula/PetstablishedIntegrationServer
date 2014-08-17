@@ -10,6 +10,8 @@ class Pet
 
   validates_uniqueness_of :uid
 
+  before_validation :on_before_validation
+
   protected
   def on_before_validation
     self.uid = create_uid(self.id)

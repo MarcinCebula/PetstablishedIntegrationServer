@@ -22,8 +22,8 @@ RSpec.configure do |config|
 
   config.include Mongoid::Matchers, type: :model
 
-  config.filter_run_excluding :vcr_off => true
-  config.filter_run_including :focus => true
+  # config.filter_run_excluding :vcr_off => true
+  # config.filter_run_including :focus => true
 
   config.before :each do |method|
     DatabaseCleaner.strategy = :truncation

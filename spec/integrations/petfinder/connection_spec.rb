@@ -7,7 +7,7 @@ describe PetfinderIntegration::Connection, :focus => true do
   it '.get should add keys and format and execute connection with endpoint, api_method and params' do
     conn = Faraday.new do |builder|
       builder.adapter :test do |stub|
-        stub.get('') { |env| [ 200, {}, 'test' ]}
+        stub.get('') { |env| [ 200, {}, { 'test' => 'success' }.to_json ]}
       end
     end
 
@@ -15,6 +15,6 @@ describe PetfinderIntegration::Connection, :focus => true do
                                              'format' => 'json', 'key' => '3ea4a92e053a83bda1d17959baf8b158', 'id' => 'NY803' }).and_return(conn)
 
     result = subject.get('shelter.get', { 'id' => 'NY803' })
-    expect(result).to eq 'test'
+    expect(result['test']).to eq 'success'
   end
 end
