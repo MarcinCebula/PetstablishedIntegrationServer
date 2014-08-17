@@ -10,6 +10,7 @@ module PetfinderIntegration
       def run
         clean_hash = cleanup(@data, ['media'])
         set_instance_variables(clean_hash)
+        self
       end
 
       private

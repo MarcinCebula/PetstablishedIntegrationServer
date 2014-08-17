@@ -11,6 +11,7 @@ module PetfinderIntegration
         clean_hash['media'] = clean_media(@data)
         apply_translations(clean_hash)
         set_instance_variables(clean_hash)
+        self
       end
 
       def images
