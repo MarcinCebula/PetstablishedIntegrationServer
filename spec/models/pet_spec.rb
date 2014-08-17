@@ -45,17 +45,6 @@ describe Pet, :focus => true do
       "animal"=>"Cat"}
   }
 
-
-
-  describe 'before_filter method' do
-    it 'create_uid should set NY803 is uid ' do
-      expect(subject.new.send(:create_uid, "NY803")).to eq "ny803"
-    end
-    it 'create_url_id should convert "Empty Cages Collective" to url type format and set as url_id ' do
-      expect(subject.new.send(:create_url_id, "Empty Cages Collective")).to eq "empty-cages-collective"
-    end
-  end
-
   describe 'create' do
     before(:each) do
       Shelter.create!(shelter_NY803_hash)
@@ -75,5 +64,17 @@ describe Pet, :focus => true do
         expect { shelter.pets.create!(pet_24747073) }.to raise_error
       end
     end
+
+    # ------------------------- Extract to Shared Example -------------------------------
+    describe 'before_filter method' do
+      it 'create_uid should set NY803 is uid ' do
+        expect(subject.new.send(:create_uid, "NY803")).to eq "ny803"
+      end
+      it 'create_url_id should convert "Empty Cages Collective" to url type format and set as url_id ' do
+        expect(subject.new.send(:create_url_id, "Empty Cages Collective")).to eq "empty-cages-collective"
+      end
+    end
+    # ---------------------------------------- end ---------------------------------------
+
   end
 end

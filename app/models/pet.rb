@@ -17,10 +17,12 @@ class Pet
   end
 
   private
+  # -------- Extract into module. Later -----------
   def create_uid(id)
     id.parameterize
   end
   def create_url_id(str)
     str.gsub('.','').parameterize
   end
+  # ------------------ end ------------------------
 end
