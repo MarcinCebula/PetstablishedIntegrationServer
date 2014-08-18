@@ -56,6 +56,7 @@ module PetfinderIntegration
         }
       end
       def cleanup_images(media_data)
+        return [] if media_data.empty?
         return [] if media_data['photos'].length == 0
         return [] if media_data['photos']['photo'].length == 0
 
