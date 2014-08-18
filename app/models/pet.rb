@@ -2,6 +2,7 @@ class Pet
   include Mongoid::Document
   include Mongoid::Timestamps
   include Mongoid::Attributes::Dynamic
+  include Mongoid::Pagination
 
   embedded_in :shelter
 

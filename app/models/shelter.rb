@@ -2,6 +2,7 @@ class Shelter
   include Mongoid::Document
   include Mongoid::Timestamps
   include Mongoid::Attributes::Dynamic
+  include Mongoid::Pagination
 
   embeds_many :pets
 

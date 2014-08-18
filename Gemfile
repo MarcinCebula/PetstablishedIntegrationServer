@@ -9,7 +9,7 @@ gem 'jbuilder', '~> 2.0'
 gem 'spring',        group: :development
 
 gem "mongoid", "~> 4.0.0"
-
+gem "mongoid-pagination"
 gem 'grape'
 gem 'grape-rabl'
 gem 'rack-cors'
