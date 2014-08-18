@@ -20,6 +20,7 @@ class PetfinderManager
       pets_object_query = PetfinderIntegration::Query::PetsThroughShelter.get_with_filter_inclusive({ 'id' => shelter.id,
                                                                                                       'count' => number_to_fetch}, filters)
       add_pets(shelter, pets_object_query.map(&:to_model))
+      shelter
     end
     def create_or_update(data)
       Shelter.where(id: data['id']).exists? ? Shelter.where(id: data['id']).first.update_attributes(data) : Shelter.create(data)
