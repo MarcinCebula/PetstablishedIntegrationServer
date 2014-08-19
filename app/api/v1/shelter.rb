@@ -23,5 +23,9 @@ module V1
       @shelter = ::Shelter.where({ url_id: params['shelter_url_id'] }).first
       @pets = @shelter.pets.paginate(:page => params['page'], :limit => params['limit'])
     end
+    get ':shelter_url_id/pets/:pet_id', :rabl => 'shelters/shelter_and_pet' do
+      @shelter = ::Shelter.where({ url_id: params['shelter_url_id'] }).first
+      @pet = @shelter.pets.where(uid: params['pet_id']).first
+    end
   end
 end
