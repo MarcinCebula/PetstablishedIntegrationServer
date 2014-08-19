@@ -12,8 +12,7 @@ module V1
       rescue
         error!('Server is experiencing problems. Please try again', 400)
       end
-      # @shelter
-      @shelter = ::Shelter.first
+      @shelter
     end
 
     get :index, :rabl => 'shelters/index' do
