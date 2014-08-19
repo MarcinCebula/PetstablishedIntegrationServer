@@ -7,11 +7,15 @@ module V1
       @id = params['integration']['organization_id']
       @count = params['integration']['fetch_count']
       error!('Missing paramters. Please fill in form before submitting.', 400) if @id.to_s.empty? || @count.to_s.empty?
+
+      @current_number_of_pets = ::Shelter.where({:id => @id}).first ? ::Shelter.where({:id => @id}).first.pets.count : 0
       begin
         @shelter = PetfinderManager.store_only_cats_and_dogs_for_organization(@id, @count)
       rescue
         error!('Server is experiencing problems. Please try again', 400)
       end
+      @added_count = @current_number_of_pets - @shelter.pets.count
+      @updated_count =  @shelter.pets.count - @added_count
       @shelter
     end
 
