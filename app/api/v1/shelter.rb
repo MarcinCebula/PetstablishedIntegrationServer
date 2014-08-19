@@ -15,13 +15,13 @@ module V1
       @shelter
     end
 
-    get :index, :rabl => 'shelters/index' do
-      @shelters = ::Shelter.all.paginate(:page => params['page'], :limit => 25).order_by('pets DESC')
+    get :index, :rabl => 'shelters/index_with_extras' do
+      @shelters = ::Shelter.all.paginate(:page => params['page'], :limit => params['limit']).order_by('pets DESC')
     end
 
     get ':shelter_url_id/pets', :rabl => 'shelters/shelter_and_pets' do
       @shelter = ::Shelter.where({ url_id: params['shelter_url_id'] }).first
-      @pets = @shelter.pets.paginate(:page => params['page'], :limit => 25)
+      @pets = @shelter.pets.paginate(:page => params['page'], :limit => params['limit'])
     end
   end
 end
