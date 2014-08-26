@@ -19,8 +19,7 @@ module PetstablishedIntegrationServer
     config.middleware.use Rack::Cors do
       allow do
         origins '*'
-        resource '/api/*', :headers => :any, :methods => [:get, :post, :patch]
-        resource '/user/*', :headers => :any, :methods => [:get, :post, :patch]
+        resource '/api/*', :headers => :any, :methods => [:get, :post]
       end
     end
   end

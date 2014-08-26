@@ -19,11 +19,7 @@ gem 'awesome_print', :git => "https://github.com/MarcinCebula/awesome_print.git"
 gem 'faraday'
 gem 'excon'
 
-#Authentication
-
- # gem 'devise', :git => 'https://github.com/plataformatec/devise.git', :branch => 'master'
-gem 'devise', "~> 3.2.4"
-gem 'angular_rails_csrf'
+gem 'jwt'
 
 group :development, :test do
   gem 'faraday'
