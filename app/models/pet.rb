@@ -19,9 +19,6 @@ class Pet
     self.url_id = create_uid(self.name)
   end
 
-
-
-
   private
   # -------- Extract into module. Later -----------
   def create_uid(id)
